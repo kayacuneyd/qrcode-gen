@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kaya QRCodeGenerator</title>
+    <link 
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" 
+        rel="stylesheet" 
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" 
+        crossorigin="anonymous"
+    >
+</head>
+<body class="d-flex h-100 text-center text-bg-dark">
+    <main class="cover-container d-flex w-100 vh-100 p-3 mx-auto flex-column">
+        <header class="mb-auto">
+          <div>
+            <h3 class="float-md-start mb-0">QRCodeGen!</h3>
+            <nav class="nav nav-masthead justify-content-center float-md-end">
+              <a class="nav-link fw-bold py-0 px-1 active" aria-current="page" href="/">Home</a>
+              <a class="nav-link fw-bold py-0 px-1 active" aria-current="page" href="/iletisim">İletisim</a>
+              <a class="nav-link fw-bold py-0 px-1" href="mailto:kaqyacuneyd@gmail.com" target="_blank">Contact</a>
+            </nav>
+          </div>
+        </header>
+
+        {% if data %}
+        <img class="d-block mx-auto mb-4" src="{{data}}" alt="" width="144" height="144">
+        {% else %}
+        <img class="d-block mx-auto mb-4" src="https://kayacuneyt.com/img/logo-haki.png" alt="" width="144" height="144">
+        {% endif %}
+
+        <div class="px-3">
+          <h1>Welcome to my QR Code Generator!</h1>
+          <p class="lead">Insert the link to change the image with your qr code above.</p>
+          
+          <div class="col-lg-12 mx-auto">
+            <form action="/" method="post" class="input-group mb-3">
+              <input class="form-control" type="text" placeholder="Default input" aria-label="default input example">
+              <button class="btn btn-outline-secondary" type="submit" id="button-addon2">Generate the QR Code</button>
+            </form>
+          </div>
+        </div>
+      
+        <footer class="mt-auto text-white-50">
+          <p>Designed by <a href="https://kayacuneyt.com/" class="text-white">Cüneyt Kaya</a>, by <a href="https://twitter.com/cueneytkayawebd" class="text-white">@cueneytkayawebd</a>.</p>
+        </footer>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+</body>
+</html>
+
+<style>
+    .cover-container{
+        max-width: 42em;
+    }
+</style>
